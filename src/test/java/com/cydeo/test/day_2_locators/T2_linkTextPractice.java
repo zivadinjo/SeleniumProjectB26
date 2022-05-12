@@ -38,15 +38,25 @@ public class T2_linkTextPractice {
         String expectedTittle = "No A/B Test";
         String actualTittle = driver.getTitle();
 
+        if (expectedTittle.equals(actualTittle)) {
+            System.out.println("No A/B Tittle test Verification Passed");
+        } else {
+            System.out.println("No A/B Tittle test Verification failed");
+        }
+
 //        Go back to home page by using the .back();
         driver.navigate().back();
 
 //      Verify title equals: Expected: Practice
-        if(expectedTittle.equals(actualTittle)){
-            System.out.println("Verification Passed");
-        }else{
-            System.out.println("Verification failed");
+        expectedTittle = "Practice";
+        actualTittle = driver.getTitle();
+
+        if (expectedTittle.equals(actualTittle)) {
+            System.out.println("Practice Tittle Verification Passed");
+        } else {
+            System.out.println("Practice Tittle Verification failed");
         }
+
         driver.quit();
     }
 }
