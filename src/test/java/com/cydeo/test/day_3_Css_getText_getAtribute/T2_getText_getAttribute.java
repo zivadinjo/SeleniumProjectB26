@@ -15,6 +15,8 @@ public class T2_getText_getAttribute {
 
         driver.get("https://practice.cydeo.com/registration_form ");
 
+//      Using CSS selector from parent to child
+//      WebElement header = driver.findElement(By.cssSelector("div[class = 'page-header']>h2"));
         WebElement header = driver.findElement(By.tagName("h2"));
 
         String expected = "Registration form";
