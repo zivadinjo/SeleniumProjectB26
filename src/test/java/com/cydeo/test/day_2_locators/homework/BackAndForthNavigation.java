@@ -30,7 +30,7 @@ public class BackAndForthNavigation {
 
         WebElement gmail = driver.findElement(By.className("gb_d"));
         gmail.sendKeys(Keys.ENTER);
-        Thread.sleep(3000);
+
         String expectedTittle = "Gmail";
         String actualTittle = driver.getTitle();
         if (actualTittle.contains(expectedTittle)){
@@ -42,10 +42,10 @@ public class BackAndForthNavigation {
 
         driver.navigate().back();
 
-        Thread.sleep(3000);
+
         String expectedTittle1 = "Google";
         String actualTittle1 = driver.getTitle();
-        if (actualTittle1 ==expectedTittle1){
+        if (actualTittle1.equals(expectedTittle1)){
             System.out.println("Verification for google passed");
         }else {
             System.out.println("Verification for google failed");

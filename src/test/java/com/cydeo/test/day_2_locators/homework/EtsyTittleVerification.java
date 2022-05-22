@@ -35,7 +35,7 @@ Expected: “Wooden spoon | Etsy”
 
 
 
-        if (expectedTittle == actualTittle){
+        if (expectedTittle.equals(actualTittle)){
             System.out.println("Tittle Verification passed");
         }else {
             System.out.println("tittle verification failed");
