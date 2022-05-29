@@ -31,6 +31,11 @@ public class T1_Xpath_Css_IsDisplayed {
         WebElement poweredBy = driver.findElement(By.cssSelector("div[style='text-align: center;']"));
 //        4. Verify all web elements are displayed.
         System.out.println("homelink.isDisplayed() = " + homelink.isDisplayed());
+        System.out.println("forgotPass.isDisplayed() = " + forgotPass.isDisplayed());
+        System.out.println("eMail.isDisplayed() = " + eMail.isDisplayed());
+        System.out.println("inputBox.isDisplayed() = " + inputBox.isDisplayed());
+        System.out.println("retrievePass.isDisplayed() = " + retrievePass.isDisplayed());
+        System.out.println("poweredBy.isDisplayed() = " + poweredBy.isDisplayed());
         driver.quit();
 
 
