@@ -26,7 +26,11 @@ public class T4_RadioButton {
         hockeyButton.click();
 //        4. Verify “Hockey” radio button is selected after clicking.
         System.out.println("hockey Button is selected= " + hockeyButton.isSelected());
-        driver.quit();
+
+//        Locate green Button
+        WebElement greenRadiobutton = driver.findElement(By.xpath("//input[@id='green']"));
+//        Verify is it is Green Button enabled
+        System.out.println("greenRadiobutton is Enabled = " + greenRadiobutton.isEnabled());
 
 
 
