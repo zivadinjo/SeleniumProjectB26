@@ -1,4 +1,4 @@
-package com.cydeo.test.day_5_findElements_checkBox_radioButton;
+package com.cydeo.test.day_5_FindElements_checkBox_radioButton;
 
 import com.cydeo.test.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class T2_findElements {
+public class T2_FindElements {
     public static void main(String[] args) {
 
 //        TC #4: FindElements Task

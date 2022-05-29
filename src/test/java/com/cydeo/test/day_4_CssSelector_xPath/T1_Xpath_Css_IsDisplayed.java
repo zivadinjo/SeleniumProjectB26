@@ -1,6 +1,5 @@
-package com.cydeo.test.day_4_cssSelector_xPath;
+package com.cydeo.test.day_4_CssSelector_xPath;
 
-import com.google.common.base.Verify;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
