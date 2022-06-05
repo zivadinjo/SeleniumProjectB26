@@ -65,15 +65,15 @@ public class T2_State_Dropdown {
 
         System.out.println("languages.isMultiple() = " + languages.isMultiple());
 
+//       getOptions() will return to all options in dropdown
+        List<WebElement> allOptions = languages.getOptions();
 
-        languages.selectByValue("java");
-        languages.selectByVisibleText("C#");
-        languages.selectByIndex(3);
+//        languages.selectByValue("java");
+//        languages.selectByVisibleText("C#");
+//        languages.selectByIndex(3);
 
 //        4. Print out all selected values.
-//        getOptions() will return to all options in dropdown
 
-        List<WebElement> allOptions = languages.getOptions();
         for (WebElement each : allOptions) {
 
             each.click();
