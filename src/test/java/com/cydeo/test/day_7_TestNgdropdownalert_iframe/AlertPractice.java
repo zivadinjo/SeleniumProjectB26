@@ -55,7 +55,7 @@ public class AlertPractice {
         String actualRes = resultTxt.getText();
         String expectedRes = "You successfully clicked an alert";
 
-        Assert.assertEquals(actualRes,expectedRes);
+        Assert.assertEquals(actualRes,expectedRes,"Result text did not appear correctly ");
 
 
     }
