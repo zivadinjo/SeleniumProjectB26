@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class T1_Simple_Dropdown {
+public class T1_SimpleDropdown {
 
     WebDriver driver;
 
