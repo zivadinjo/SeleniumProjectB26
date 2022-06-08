@@ -40,35 +40,24 @@ public class SelectDayDropdown {
     public void dateDropdownTest(){
 
         Select yearDropdown = new Select(driver.findElement(By.id("year")));
-
         Select monthDropdown = new Select(driver.findElement(By.id("month")));
-
         Select dayDropdown = new Select(driver.findElement(By.id("day")));
 
 
         yearDropdown.selectByVisibleText("1923");
-
         monthDropdown.selectByValue("11");
-
         dayDropdown.selectByIndex(0);
 
         String actualYearResult = yearDropdown.getFirstSelectedOption().getText();
-
         String expectedYearResult = "1923";
-
         Assert.assertEquals(actualYearResult, expectedYearResult);
 
         String actualMonthResult = monthDropdown.getFirstSelectedOption().getText();
-
         String expectedMonthResult = "December";
-
         Assert.assertEquals(actualMonthResult,expectedMonthResult);
 
-
         String actualDayResult = dayDropdown.getFirstSelectedOption().getText();
-
         String expectedDayResult = "1";
-
         Assert.assertEquals(actualDayResult,expectedDayResult);
 
 
