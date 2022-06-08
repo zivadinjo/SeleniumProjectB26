@@ -49,6 +49,34 @@ public class AlertPractice {
 
     }
 
+    @Test
+    public void promtAlertTest(){
+
+//        3. Click to “Click for JS Prompt” button
+
+        WebElement jsPromt = driver.findElement(By.xpath("//button[.='Click for JS Prompt']"));
+        jsPromt.click();
+
+//        4. Send “hello” text to alert
+
+        Alert alert = driver.switchTo().alert();
+        alert.sendKeys("hello");
+
+//        5. Click to OK button from the alert
+
+        alert.accept();
+
+//        6. Verify “You entered:  hello” text is displayed.
+
+        String  actualAlertResult =  driver.findElement(By.id("result")).getText();
+        String expectedAlertResult = "You entered: hello";
+
+        Assert.assertEquals(actualAlertResult, expectedAlertResult,"Result did not appear correctly");
+
+
+    }
+
+
     @AfterMethod
     public void tearDown(){
         driver.quit();
