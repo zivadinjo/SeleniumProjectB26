@@ -3,6 +3,7 @@ package com.cydeo.test.day_9_Iframe;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class IframePractice {
@@ -28,7 +29,7 @@ public class IframePractice {
 
         // we can use frame(index) : index starts from 0
         // we can find iframe tags from html with using xpath "//iframe"
-        // driver.switchTo().frame(0);
+        //driver.switchTo().frame(0);
 
 
         WebElement commentBody = driver.findElement(By.id("tinymce"));
@@ -37,12 +38,19 @@ public class IframePractice {
         Thread.sleep(3000);
 
 //          4- Type "Hello World" in comment body
+        commentBody.sendKeys("Hello World");
 
 //          5- Verify "Hello World" text is written in comment body
+        Assert.assertEquals(commentBody.getText(),"Hello World");
 
-//          6- Verify header "An iFrame containing the TinyMCE
 
-//          WYSIWYG Editor" is displayed
+        driver.switchTo().parentFrame();
+
+        //driver.switchTo().defaultContent();
+
+//          6- Verify header "An iFrame containing the TinyMCE WYSIWYG Editor" is displayed
+        WebElement headerText = driver.findElement(By.tagName("h3"));
+        Assert.assertTrue(headerText.isDisplayed(),"Header text did not appear!");
 
     }
 
