@@ -38,7 +38,7 @@ public class T2_CRM_Login extends TestBase {
 
 
     }
-![](../../../../../../../../../OneDrive/Desktop/Screenshot 2022-06-11 134242.png)
+
     @Test
     public void crm_login_test_2(){
 
