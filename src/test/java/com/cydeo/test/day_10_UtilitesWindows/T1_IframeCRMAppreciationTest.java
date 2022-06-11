@@ -1,6 +1,5 @@
 package com.cydeo.test.day_10_UtilitesWindows;
 
-import com.cydeo.test.base.TestBase;
 import com.cydeo.test.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class T1IframeCRMAppreciationTest {
+public class T1_IframeCRMAppreciationTest {
 // Failed for many reasons
     WebDriver driver;
 

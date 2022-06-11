@@ -7,6 +7,11 @@ import org.openqa.selenium.WebElement;
 
 public class CRMUtilities {
 
+//   Method #1 info:
+//   Name: login_crm()
+//   Return type: void
+//   Arg1: WebDriver
+
     public static void crmLogIn(WebDriver driver){
 
         WebElement username = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
@@ -19,5 +24,27 @@ public class CRMUtilities {
         loginBtn.click();
 
     }
+
+//    Method #2 info:
+//    Name: login_crm()
+//    Return type: void
+//    Arg1: WebDriver
+//    Arg2: String username
+//    Arg3: String password
+
+    public static void crm_login(WebDriver driver,String username,String password){
+
+        WebElement inputUsername = driver.findElement(By.xpath("//input[@name='USER_LOGIN']"));
+        inputUsername.sendKeys(username);
+
+        WebElement inputPassword = driver.findElement(By.xpath("//input[@name='USER_PASSWORD']"));
+        inputPassword.sendKeys(password);
+
+        WebElement loginBtn = driver.findElement(By.xpath("//input[@class='login-btn']"));
+        loginBtn.click();
+
+
+    }
+
 
 }
