@@ -35,7 +35,7 @@ public class SingletonDriverVersion {
     public void yahooTitle(){
         Driver.getDriver().get("https://yahoo.com");
         System.out.println("yahoo test driver = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
-        Driver.closeDriver(); // yahoo is alphabetically run last,even if it is in the middle,that's why closeDriver() method is in yahooTittle test
+        Driver.closeDriver(); // yahoo is alphabetically run last,even if it is in the middle,that's why closeDriver() method is in yahooTittle test, other way you can put priority next to each test and make them run at order you want
     }
 
 
