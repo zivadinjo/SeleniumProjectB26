@@ -4,7 +4,7 @@ public class Singleton {
 
     private Singleton(){}
 
-    private static String word;
+    private static String word; // word is null when you call it first time in a class
 
     public static String getWord() {
         if(word == null){
