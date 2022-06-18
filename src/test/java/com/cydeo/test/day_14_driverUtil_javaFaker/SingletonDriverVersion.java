@@ -28,14 +28,14 @@ public class SingletonDriverVersion {
     public void googleTitle(){
         Driver.getDriver().get("https://google.com");
         System.out.println("google test driver = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
-        Driver.closeDriver();
+
     }
 
     @Test
     public void yahooTitle(){
         Driver.getDriver().get("https://yahoo.com");
         System.out.println("yahoo test driver = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
-        Driver.closeDriver();
+        Driver.closeDriver(); // yahoo is alphabetically run last,even if it is in the middle,that's why closeDriver() method is in yahooTittle test
     }
 
 
@@ -43,6 +43,6 @@ public class SingletonDriverVersion {
     public void etsyTitle(){
         Driver.getDriver().get("https://etsy.com");
         System.out.println("etsy test driver = " + ((RemoteWebDriver) Driver.getDriver()).getSessionId());
-        Driver.closeDriver();
+
     }
 }
