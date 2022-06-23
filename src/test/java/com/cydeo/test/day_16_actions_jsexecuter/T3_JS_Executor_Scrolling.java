@@ -32,6 +32,9 @@ public class T3_JS_Executor_Scrolling {
          //* Click on Subscribe
         WebElement subscribeBtn = Driver.getDriver().findElement(By.xpath("//button[@class='wt-btn wt-input-btn-group__btn']"));
         subscribeBtn.click();
+
+//        email.sendKeys(faker.internet().emailAddress())+Keys.ENTER); -> second way to click subscribe button
+
          //*Verify "Great! We've sent you an email to confirm your subscription." is displayed
         WebElement result = Driver.getDriver().findElement(By.xpath("//div[@class='wt-alert wt-alert--inline wt-alert--success-01 wt-text-body-01']"));
         String actual = result.getText();
