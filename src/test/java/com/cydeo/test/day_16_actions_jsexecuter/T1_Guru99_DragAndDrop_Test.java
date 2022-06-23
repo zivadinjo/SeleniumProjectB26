@@ -5,6 +5,7 @@ import com.cydeo.test.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class T1_Guru99_DragAndDrop_Test {
@@ -38,6 +39,12 @@ public class T1_Guru99_DragAndDrop_Test {
         actions.dragAndDrop(fiveKtwo,creditAmount).perform();
 
 //    7- Verify “Perfect!” text displayed.
+
+        WebElement perfect = Driver.getDriver().findElement(By.linkText("Perfect!"));
+        String actual = "Perfect!";
+        String expected = perfect.getText();
+        Assert.assertEquals(actual,expected,"Verification failed");
+        Driver.closeDriver();
 
 
     }
