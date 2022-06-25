@@ -33,7 +33,7 @@ public class T3_DynamicallyLoadedPageTest {
 
 //        3. Assert: Message “Done!” is displayed.
 
-        Assert.assertEquals(dynamicallyLoadedPage7.doneMsg.getText(),"Done!");
+        Assert.assertEquals(dynamicallyLoadedPage7.doneMsg.getText(),"Done!","Verification failed");
 
 //        4. Assert: Image is displayed.
 
