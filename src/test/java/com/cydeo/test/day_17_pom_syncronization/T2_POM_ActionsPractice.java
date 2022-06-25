@@ -37,7 +37,7 @@ public class T2_POM_ActionsPractice {
 
 //     3. Click and hold small circle
         Actions actions = new Actions(Driver.getDriver());
-        actions.moveToElement(cydeoPracticePage.smallCircle).clickAndHold().moveByOffset(100,50).perform(); // finding,clicking and holding small circle,moveByOffset moves circle by X and Y arrows, and it allows to show up drop here in big circle
+        actions.moveToElement(cydeoPracticePage.smallCircle).clickAndHold().moveByOffset(100,50).perform(); // finding,clicking and holding small circle,moveByOffset moves circle by X and Y axis, and it allows to show up drop here in big circle
 
 //     4. Verify "Drop here." text appears on big circle
 
