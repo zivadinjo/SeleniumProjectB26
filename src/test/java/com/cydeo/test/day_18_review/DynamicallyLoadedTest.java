@@ -35,7 +35,7 @@ public class DynamicallyLoadedTest {
 //7. Click to Submit button
         dynamicallyLoadedPage1.submitBtn.click();
 
-//8. Assert “Your password is invalid!” text is displayed.
+//8. Assert “Your password is invalid!” text is displayed
         Assert.assertTrue(dynamicallyLoadedPage1.errorMsg.isDisplayed());
 
 
