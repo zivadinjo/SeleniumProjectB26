@@ -1,7 +1,9 @@
 package com.cydeo.test.day_18_review;
 
 import com.cydeo.pages.DynamicallyLoadedPage1;
+import com.cydeo.test.utilities.BrowserUtils;
 import com.cydeo.test.utilities.Driver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -20,8 +22,10 @@ public class DynamicallyLoadedTest {
         dynamicallyLoadedPage1.startBtn.click();
 
 //3. Wait until loading bar disappears
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
-        wait.until(ExpectedConditions.invisibilityOf(dynamicallyLoadedPage1.loadingBar));
+//        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+//        wait.until(ExpectedConditions.invisibilityOf(dynamicallyLoadedPage1.loadingBar));
+
+        BrowserUtils.waitForInvisibilityOf(dynamicallyLoadedPage1.loadingBar);// created method in browserutils class for reusability
 
 //4. Assert username inputbox is displayed
         Assert.assertTrue(dynamicallyLoadedPage1.userName.isDisplayed());
