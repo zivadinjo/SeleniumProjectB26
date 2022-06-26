@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class JSExecutorScrollTest {
 
     @Test
-    public void js_executor_scroll_test() {
+    public void js_executor_scroll_test() throws InterruptedException {
 
 //1- Open a chrome browser
 //2- Go to: https://practice.cydeo.com/infinite_scroll
@@ -19,9 +19,17 @@ public class JSExecutorScrollTest {
         js.executeScript("window.scrollBy(0,750)");//window.scrollBy(x axis-horizontal one, y axis - vertical one0
 
 //a.  750 pixels down 10 times.
+        for(int i =0; i<10;i++){
+            Thread.sleep(1000);
+            js.executeScript("window.scrollBy(0,750)");
+        }
 
 
 //b.  750 pixels up 10 times
+        for(int i =0; i<10;i++){
+//            Thread.sleep(1000);
+            js.executeScript("window.scrollBy(0,-750)");
+        }
 
     }
 }
