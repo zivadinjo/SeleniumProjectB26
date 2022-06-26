@@ -12,7 +12,7 @@ public class DynamicallyLoadedPage1 {
     public DynamicallyLoadedPage1(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
+//
     @FindBy(xpath="//button[.='Start']")
     public WebElement startBtn;
 
